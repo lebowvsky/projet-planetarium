@@ -47,19 +47,45 @@ if(mapButton) {
 
 const cards = document.body.querySelectorAll('.card');
 
-cards.forEach(elt => {
+/* cards.forEach(elt => {
     elt.style.opacity = "0";
     elt.style.transition = "opacity 450ms ease-in-out";
     window.setTimeout(()=>{
         elt.style.opacity = "1";
     }, 500);
-});
+
+}); */
 
 
 /* ------------ Scroll Event ---------------------------- */
 const screenHeight = screen.height;
 
-cards.forEach(elt => {
-    console.log(elt.offsetTop);
-});
 
+/* ------------ Scroll Event ---------------------------- */
+const docHeight = document.documentElement.clientHeight; //hauteur totale du doc
+
+
+cards.forEach(elt => {
+    const eltPositionTop = elt.offsetTop;
+    if((eltPositionTop) > docHeight - (docHeight/4)){    // Si la card est en dessous de 3/4 de l'écran alors card pas visible
+        elt.style.transition = "opacity 350ms ease-in-out";
+        elt.style.opacity = "0";
+    } else {elt.style.opacity = "1";}
+})
+
+document.addEventListener('DOMContentLoaded', function(){
+    document.addEventListener('scroll', function(){
+        const eltScrollTop = document.documentElement.scrollTop; // pixels à scroller jusqu'à fin du doc
+        
+
+        cards.forEach(elt => {
+            const eltPositionTop = elt.offsetTop;
+            if((eltPositionTop - eltScrollTop) > docHeight - (docHeight/4)){    // Si la card passe au dessus de 3/4 de l'écran alors card visible
+                elt.style.transition = "opacity 350ms ease-in-out";
+                elt.style.opacity = "0";
+            } else {elt.style.opacity = "1";}
+        })
+
+
+    });
+});
