@@ -1,0 +1,19 @@
+{
+  "name": "projet-planetarium",
+  "version": "1.0.0",
+  "description": "site fictif du Planetarium de Nantes",
+  "main": "script/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lebowvsky/projet-planetarium.git"
+  },
+  "author": "Morgan Bourdillel, Nicolas Mercier, Brice Le Gallo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lebowvsky/projet-planetarium/issues"
+  },
+  "homepage": "https://github.com/lebowvsky/projet-planetarium#readme"
+}
