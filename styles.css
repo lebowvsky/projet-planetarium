@@ -114,10 +114,9 @@ body {
 .card {
     width: var(--card-width);
     background-color: var(--card-color-bkg);
-    min-height: 400px;
     margin: var(--card-margin-top-bottom) auto var(--card-margin-top-bottom) auto;
     border-radius: var(--border-radius);
-    min-height: 400px;
+    min-height: 50vh;
     font-size: var(--p-a-font-size);
     padding: 4vh 2vh 4vh 2vh;
     opacity: 0;
