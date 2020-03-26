@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lebowvsky/projet-planetarium/issues"
   },
-  "homepage": "https://github.com/lebowvsky/projet-planetarium#readme"
+  "homepage": "https://github.com/lebowvsky/projet-planetarium#readme",
+  "dependencies": {
+    "nodemailer": "^6.4.6"
+  }
 }
